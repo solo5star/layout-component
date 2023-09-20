@@ -1,7 +1,8 @@
-import { HTMLAttributes } from "react";
-export type ContainerProps = HTMLAttributes<HTMLDivElement> & {
-    minWidth?: number;
-    maxWidth?: number;
-};
-declare const Container: (props: ContainerProps) => import("react/jsx-runtime").JSX.Element;
+/// <reference types="react" />
+import { PropsWithHTMLElement } from "../types";
+export type ContainerProps<TElementType extends React.ElementType> = PropsWithHTMLElement<{
+    minWidth?: number | string;
+    maxWidth?: number | string;
+}, TElementType>;
+declare const Container: <TElementType extends import("react").ElementType<any> = "div">(props: ContainerProps<TElementType>) => import("react/jsx-runtime").JSX.Element;
 export default Container;
