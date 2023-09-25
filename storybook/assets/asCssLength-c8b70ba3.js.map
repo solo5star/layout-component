@@ -1,0 +1,1 @@
+{"version":3,"file":"asCssLength-c8b70ba3.js","sources":["../../src/asCssLength.ts"],"sourcesContent":["const asCssLength = (value: string | number) => {\n  if (typeof value === \"number\") {\n    return `${value}px`;\n  }\n  return value;\n};\n\nexport default asCssLength;\n"],"names":["asCssLength","value"],"mappings":"AAAM,MAAAA,EAAeC,GACf,OAAOA,GAAU,SACZ,GAAGA,CAAK,KAEVA"}
